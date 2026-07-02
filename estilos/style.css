@@ -132,9 +132,9 @@ article h2{
   border-radius: 8px;
 }
 
-div#skillcontainer { 
+#skillcontainer { 
   display: grid; 
-  grid-template-columns: 1fr; /* 1 coluna */
+  grid-template-columns: 1fr; 
   gap: 30px; 
 }
 
@@ -229,19 +229,38 @@ footer a:hover{
 
 
 @media screen and (min-width: 768px) {
-  div#skillcontainer { 
-    grid-template-columns: 1fr 1fr;
+  main {
+   grid-template-columns: auto 300px 1fr auto;
+  } 
+
+section#ficha {
+  grid-column:  2 / 3;
+  height: fit-content;
+  position: sticky;
+  top: 65px;
   }
+
+section#detalhes{
+  grid-column:  3 / 4;
+  }
+
+ #skillcontainer { 
+ grid-template-columns: 1fr 1fr;
+  }
+
   #projetocontainer .projeto {
     flex-direction: row-reverse;
     justify-content: space-between;
   }
+
   #projetocontainer .projeto-info {
     max-width: 80%;
   }
+
   #projetocontainer .foto {
     aspect-ratio: 1/1;
     max-width: 20%;
     max-height: 200px;
   }
 }
+
